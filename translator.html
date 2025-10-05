@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SmartTravelGuard</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    
+      <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+        <div class="container">
+      <a class="navbar-brand" href="index.html">SmartTravelGuard</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="oi oi-menu"></span> Menu
+          </button>
+
+          <div class="collapse navbar-collapse" id="ftco-nav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+              <li class="nav-item active"><a href="features.html" class="nav-link">Language Translator</a></li>
+              <li class="nav-item"><a href="profile.html" class="nav-link">Profile</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <div class="hero-wrap js-fullheight" style="background-image: url('images/bg_1.jpg');">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
+          <div class="col-md-9 text-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+            <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span class="mr-2"><a href="index.html">Home</a></span> <span>Language Translator</span></p>
+            <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Language Translator</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="ftco-section contact-section ftco-degree-bg">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10 mx-auto">
+            <h2 class="h4 text-center">Multi-Language Translator</h2>
+            <div class="p-4" style="background:#ffffff;border:1px solid #e5e7eb;border-radius:10px">
+              
+              <div class="row mb-3">
+                <div class="col-6">
+                  <label for="from">From</label>
+                  <select id="from" class="form-control">
+                    <option value="en">English</option>
+                    <option value="hi">Hindi</option>
+                    <option value="te">Telugu</option>
+                    <option value="ta">Tamil</option>
+                    <option value="bn">Bengali</option>
+                    <option value="gu">Gujarati</option>
+                    <option value="fr">French</option>
+                    <option value="de">German</option>
+                  </select>
+                </div>
+                <div class="col-6">
+                  <label for="to">To</label>
+                  <select id="to" class="form-control">
+                    <option value="hi">Hindi</option>
+                    <option value="en">English</option>
+                    <option value="te">Telugu</option>
+                    <option value="ta">Tamil</option>
+                    <option value="bn">Bengali</option>
+                    <option value="gu">Gujarati</option>
+                    <option value="fr">French</option>
+                    <option value="de">German</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="col-12 text-center">
+                  <button id="swap" class="btn btn-secondary">Swap Languages</button>
+                </div>
+              </div>
+              
+              <div class="row mb-3">
+                <div class="col-md-6 mb-3 mb-md-0">
+                  <label for="text">Type Text</label>
+                  <textarea id="text" class="form-control" rows="6" placeholder="Type text">where is the hospital</textarea>
+                </div>
+                <div class="col-md-6">
+                  <label>Translation</label>
+                  <div id="out" class="p-3" style="background:#f8fafc;border-radius:6px;min-height:140px"></div>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="col-12 text-center">
+                  <button id="translateBtn" class="btn btn-primary">Translate</button>
+                </div>
+              </div>
+              
+              <div class="mt-2 text-center">
+                <span class="badge badge-light">hello</span>
+                <span class="badge badge-light">help</span>
+                <span class="badge badge-light">emergency</span>
+                <span class="badge badge-light">where is the hospital</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+
+        <section class="ftco-section-parallax">
+      <div class="parallax-img d-flex align-items-center">
+        <div class="container">
+          <div class="row d-flex justify-content-center">
+            <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
+              <h2>Subcribe to our Our website</h2>
+              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in</p>
+              <div class="row d-flex justify-content-center mt-5">
+                <div class="col-md-8">
+                  <form action="#" class="subscribe-form">
+                    <div class="form-group d-flex">
+                      <input type="text" class="form-control" placeholder="Enter email address">
+                      <input type="submit" value="Subscribe" class="submit px-3">
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">SmartTravelGuard</h2>
+              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
+                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4 ml-md-4">
+              <h2 class="ftco-heading-2">Information</h2>
+              <ul class="list-unstyled">
+                <li><a href="#" class="py-2 d-block">About Us</a></li>
+                <li><a href="#" class="py-2 d-block">Online enquiry</a></li>
+                <li><a href="#" class="py-2 d-block">Call Us</a></li>
+                <li><a href="#" class="py-2 d-block">General enquiries</a></li>
+                <li><a href="#" class="py-2 d-block">Booking Conditions</a></li>
+                <li><a href="#" class="py-2 d-block">Privacy and Policy</a></li>
+                <li><a href="#" class="py-2 d-block">Refund policy</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+             <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Experience</h2>
+              <ul class="list-unstyled">
+                <li><a href="#" class="py-2 d-block">Beach</a></li>
+                <li><a href="#" class="py-2 d-block">SmartTravelGuard</a></li>
+                <li><a href="#" class="py-2 d-block">Wildlife</a></li>
+                <li><a href="#" class="py-2 d-block">Honeymoon</a></li>
+                <li><a href="#" class="py-2 d-block">Nature</a></li>
+                <li><a href="#" class="py-2 d-block">Party</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+                <h2 class="ftco-heading-2">Have a Questions?</h2>
+                <div class="block-23 mb-3">
+                  <ul>
+                    <li><span class="icon icon-map-marker"></span><span class="text">Sri Ganesh Enclave Johna Bonda,Old Alwal,Telangana</span></li>
+                    <li><a href="#"><span class="icon icon-phone"></span><span class="text">+91 83096 49014</span></a></li>
+                    <li><a href="#"><span class="icon icon-envelope"></span><span class="text">bhanu@gmail.com</span></a></li>
+                  </ul>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+  
+
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/jquery.timepicker.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // Translation function using Google Translate API
+    async function translate(){
+      const text = document.getElementById('text').value;
+      const from = document.getElementById('from').value;
+      const to = document.getElementById('to').value;
+      const output = document.getElementById('out');
+      
+      if (!text.trim()) {
+        output.textContent = 'Please enter text to translate';
+        return;
+      }
+      
+      if (from === to) {
+        output.textContent = text;
+        return;
+      }
+      
+      try {
+        output.textContent = 'Translating...';
+        
+        // Using Google Translate API (you'll need to replace with your API key)
+        const apiKey = 'YOUR_GOOGLE_TRANSLATE_API_KEY'; // Replace with your actual API key
+        const url = `https://translation.googleapis.com/language/translate/v2?key=${apiKey}`;
+        
+        const response = await fetch(url, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            q: text,
+            source: from,
+            target: to,
+            format: 'text'
+          })
+        });
+        
+        if (!response.ok) {
+          throw new Error('Translation failed');
+        }
+        
+        const data = await response.json();
+        const translatedText = data.data.translations[0].translatedText;
+        output.textContent = translatedText;
+        
+      } catch (error) {
+        console.error('Translation error:', error);
+        // Fallback to a simple translation service or show error
+        output.textContent = 'Translation service unavailable. Please try again later.';
+        
+        // Alternative: You can implement a simple word mapping for basic translations
+        const simpleTranslations = {
+          'hello': { hi: 'नमस्ते', te: 'హలో', ta: 'வணக்கம்', bn: 'হ্যালো', gu: 'હેલો', fr: 'Bonjour', de: 'Hallo' },
+          'help': { hi: 'मदद', te: 'సహాయం', ta: 'உதவி', bn: 'সাহায্য', gu: 'મદદ', fr: 'Aide', de: 'Hilfe' },
+          'emergency': { hi: 'आपातकाल', te: 'అత్యవసర', ta: 'அவசர', bn: 'জরুরি', gu: 'જરૂરી', fr: 'Urgence', de: 'Notfall' },
+          'where is the hospital': { hi: 'अस्पताल कहाँ है', te: 'ఆసుపత్రి ఎక్కడ ఉంది', ta: 'மருத்துவமனை எங்கே', bn: 'হাসপাতাল কোথায়', gu: 'હોસ્પિટલ ક્યાં છે', fr: 'Où est l\'hôpital', de: 'Wo ist das Krankenhaus' }
+        };
+        
+        const lowerText = text.toLowerCase();
+        if (simpleTranslations[lowerText] && simpleTranslations[lowerText][to]) {
+          output.textContent = simpleTranslations[lowerText][to];
+        }
+      }
+    }
+    
+    document.getElementById('translateBtn').addEventListener('click', translate);
+    document.getElementById('swap').addEventListener('click', ()=>{
+      const f = document.getElementById('from');
+      const t = document.getElementById('to');
+      const tmp = f.value;
+      f.value = t.value;
+      t.value = tmp;
+      translate();
+    });
+    
+    // Auto-translate on page load
+    translate();
+  </script>
+    
+  </body>
+</html>

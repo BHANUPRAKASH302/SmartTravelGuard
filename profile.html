@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SmartTravelGuard</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    
+	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container">
+      <a class="navbar-brand" href="index.html">SmartTravelGuard</a>
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="features.html" class="nav-link">Features</a></li>
+          <li class="nav-item dropdown active">
+            <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Profile
+            </a>
+            <div class="dropdown-menu" aria-labelledby="profileDropdown">
+              <a class="dropdown-item" href="#" onclick="showLoginModal()">Login</a>
+              <a class="dropdown-item" href="#" onclick="showRegisterModal()">Register</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#" onclick="logout()">Logout</a>
+            </div>
+          </li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+    <!-- END nav -->
+    
+    <div class="hero-wrap js-fullheight" style="background-image: url('images/bg_1.jpg');">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
+          <div class="col-md-9 text-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+            <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span class="mr-2"><a href="index.html">Home</a></span> <span>Profile</span></p>
+            <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Profile</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="ftco-section contact-section ftco-degree-bg">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-10">
+            <div class="row">
+              <!-- User Profile Card -->
+              <div class="col-md-4 mb-4">
+                <div class="card shadow-sm h-100">
+                  <div class="card-body text-center">
+                    <div class="mb-3">
+                      <div class="profile-avatar mx-auto mb-3" style="width: 80px; height: 80px; background: linear-gradient(45deg, #007bff, #28a745); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; font-weight: bold;">
+                        <i class="icon-user"></i>
+                      </div>
+                      <h4 class="card-title">John Doe</h4>
+                      <p class="text-muted">Traveler</p>
+                    </div>
+                    <div class="d-grid gap-2">
+                      <button class="btn btn-outline-primary btn-sm" onclick="editProfile()">Edit Profile</button>
+                      <button class="btn btn-outline-secondary btn-sm" onclick="changePassword()">Change Password</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- KYC Verification Card -->
+              <div class="col-md-4 mb-4">
+                <div class="card shadow-sm h-100">
+                  <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0"><i class="icon-shield"></i> KYC Verification</h5>
+                  </div>
+                  <div class="card-body">
+                    <form id="kycForm" onsubmit="return false;">
+                      <div class="form-group mb-3">
+                        <label for="aadhaar" class="form-label">Aadhaar Number</label>
+                        <input type="text" id="aadhaar" class="form-control" placeholder="Enter 12-digit Aadhaar" maxlength="12" pattern="[0-9]{12}">
+                        <small class="form-text text-muted">Enter your 12-digit Aadhaar number for verification</small>
+                      </div>
+                      <button type="button" class="btn btn-primary w-100" onclick="submitKyc()">
+                        <i class="icon-check"></i> Submit KYC
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Digital ID Card -->
+              <div class="col-md-4 mb-4">
+                <div class="card shadow-sm h-100">
+                  <div class="card-header bg-success text-white">
+                    <h5 class="mb-0"><i class="icon-key"></i> Digital ID Records</h5>
+                  </div>
+                  <div class="card-body">
+                    <div class="mb-2">
+                      <strong>ID Hash:</strong>
+                      <span class="text-muted small d-block" id="idHash">Not generated</span>
+                    </div>
+                    <div class="mb-2">
+                      <strong>Blockchain:</strong>
+                      <span class="text-muted small d-block" id="blockchain">Not verified</span>
+                    </div>
+                    <div class="mb-3">
+                      <strong>Status:</strong>
+                      <span class="badge badge-warning" id="kycStatus">KYC Pending</span>
+                    </div>
+                    <button class="btn btn-outline-info btn-sm w-100" onclick="viewDigitalId()">
+                      <i class="icon-eye"></i> View Digital ID
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Additional Features Row -->
+            <div class="row mt-4">
+              <div class="col-md-6 mb-4">
+                <div class="card shadow-sm">
+                  <div class="card-header bg-info text-white">
+                    <h5 class="mb-0"><i class="icon-settings"></i> Account Settings</h5>
+                  </div>
+                  <div class="card-body">
+                    <div class="list-group list-group-flush">
+                      <a href="#" class="list-group-item list-group-item-action" onclick="showNotifications()">
+                        <i class="icon-bell"></i> Notification Settings
+                      </a>
+                      <a href="#" class="list-group-item list-group-item-action" onclick="showPrivacy()">
+                        <i class="icon-lock"></i> Privacy Settings
+                      </a>
+                      <a href="#" class="list-group-item list-group-item-action" onclick="showSecurity()">
+                        <i class="icon-shield"></i> Security Settings
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 mb-4">
+                <div class="card shadow-sm">
+                  <div class="card-header bg-warning text-white">
+                    <h5 class="mb-0"><i class="icon-star"></i> Travel Preferences</h5>
+                  </div>
+                  <div class="card-body">
+                    <div class="list-group list-group-flush">
+                      <a href="#" class="list-group-item list-group-item-action" onclick="showLanguagePrefs()">
+                        <i class="icon-globe"></i> Language Preferences
+                      </a>
+                      <a href="#" class="list-group-item list-group-item-action" onclick="showTravelHistory()">
+                        <i class="icon-map"></i> Travel History
+                      </a>
+                      <a href="#" class="list-group-item list-group-item-action" onclick="showEmergencyContacts()">
+                        <i class="icon-phone"></i> Emergency Contacts
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Login Modal -->
+        <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="form-group">
+                    <label for="loginEmail">Email address</label>
+                    <input type="email" class="form-control" id="loginEmail" placeholder="Enter email">
+                  </div>
+                  <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" class="form-control" id="loginPassword" placeholder="Password">
+                  </div>
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="rememberMe">
+                    <label class="form-check-label" for="rememberMe">Remember me</label>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="performLogin()">Login</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Register Modal -->
+        <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="registerModalLabel">Register</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="form-group">
+                    <label for="regName">Full Name</label>
+                    <input type="text" class="form-control" id="regName" placeholder="Enter full name">
+                  </div>
+                  <div class="form-group">
+                    <label for="regEmail">Email address</label>
+                    <input type="email" class="form-control" id="regEmail" placeholder="Enter email">
+                  </div>
+                  <div class="form-group">
+                    <label for="regPassword">Password</label>
+                    <input type="password" class="form-control" id="regPassword" placeholder="Password">
+                  </div>
+                  <div class="form-group">
+                    <label for="regConfirmPassword">Confirm Password</label>
+                    <input type="password" class="form-control" id="regConfirmPassword" placeholder="Confirm Password">
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="performRegister()">Register</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <script>
+        function submitKyc(){
+          var aadhaar = document.getElementById('aadhaar').value.trim();
+          if(!/^\d{12}$/.test(aadhaar)){
+            alert('Aadhaar must be 12 digits');
+            return;
+          }
+          
+          // Simulate KYC submission
+          document.getElementById('kycStatus').textContent = 'Processing...';
+          document.getElementById('kycStatus').className = 'badge badge-info';
+          
+          setTimeout(() => {
+            document.getElementById('kycStatus').textContent = 'Verified';
+            document.getElementById('kycStatus').className = 'badge badge-success';
+            document.getElementById('idHash').textContent = 'a1b2c3d4e5f6...';
+            document.getElementById('blockchain').textContent = 'Verified on Ethereum';
+            alert('KYC submitted successfully!');
+          }, 2000);
+        }
+
+        function showLoginModal() {
+          $('#loginModal').modal('show');
+        }
+
+        function showRegisterModal() {
+          $('#registerModal').modal('show');
+        }
+
+        function performLogin() {
+          const email = document.getElementById('loginEmail').value;
+          const password = document.getElementById('loginPassword').value;
+          
+          if (!email || !password) {
+            alert('Please fill in all fields');
+            return;
+          }
+          
+          // Simulate login
+          alert('Login successful!');
+          $('#loginModal').modal('hide');
+        }
+
+        function performRegister() {
+          const name = document.getElementById('regName').value;
+          const email = document.getElementById('regEmail').value;
+          const password = document.getElementById('regPassword').value;
+          const confirmPassword = document.getElementById('regConfirmPassword').value;
+          
+          if (!name || !email || !password || !confirmPassword) {
+            alert('Please fill in all fields');
+            return;
+          }
+          
+          if (password !== confirmPassword) {
+            alert('Passwords do not match');
+            return;
+          }
+          
+          // Simulate registration
+          alert('Registration successful!');
+          $('#registerModal').modal('hide');
+        }
+
+        function logout() {
+          if (confirm('Are you sure you want to logout?')) {
+            localStorage.clear();
+            alert('Logged out successfully!');
+            window.location.href = 'index.html';
+          }
+        }
+
+        function editProfile() {
+          alert('Edit profile functionality would open here');
+        }
+
+        function changePassword() {
+          alert('Change password functionality would open here');
+        }
+
+        function viewDigitalId() {
+          alert('Digital ID viewer would open here');
+        }
+
+        function showNotifications() {
+          alert('Notification settings would open here');
+        }
+
+        function showPrivacy() {
+          alert('Privacy settings would open here');
+        }
+
+        function showSecurity() {
+          alert('Security settings would open here');
+        }
+
+        function showLanguagePrefs() {
+          alert('Language preferences would open here');
+        }
+
+        function showTravelHistory() {
+          alert('Travel history would open here');
+        }
+
+        function showEmergencyContacts() {
+          alert('Emergency contacts would open here');
+        }
+        </script>
+      </div>
+    </section>
+
+		<section class="ftco-section-parallax">
+      <div class="parallax-img d-flex align-items-center">
+        <div class="container">
+          <div class="row d-flex justify-content-center">
+            <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
+              <h2>Subcribe to our Our website</h2>
+              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in</p>
+              <div class="row d-flex justify-content-center mt-5">
+                <div class="col-md-8">
+                  <form action="#" class="subscribe-form">
+                    <div class="form-group d-flex">
+                      <input type="text" class="form-control" placeholder="Enter email address">
+                      <input type="submit" value="Subscribe" class="submit px-3">
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">SmartTravelGuard</h2>
+              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
+                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4 ml-md-4">
+              <h2 class="ftco-heading-2">Information</h2>
+              <ul class="list-unstyled">
+                <li><a href="#" class="py-2 d-block">About Us</a></li>
+                <li><a href="#" class="py-2 d-block">Online enquiry</a></li>
+                <li><a href="#" class="py-2 d-block">Call Us</a></li>
+                <li><a href="#" class="py-2 d-block">General enquiries</a></li>
+                <li><a href="#" class="py-2 d-block">Booking Conditions</a></li>
+                <li><a href="#" class="py-2 d-block">Privacy and Policy</a></li>
+                <li><a href="#" class="py-2 d-block">Refund policy</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+             <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Experience</h2>
+              <ul class="list-unstyled">
+                <li><a href="#" class="py-2 d-block">Beach</a></li>
+                <li><a href="#" class="py-2 d-block">SmartTravelGuard</a></li>
+                <li><a href="#" class="py-2 d-block">Wildlife</a></li>
+                <li><a href="#" class="py-2 d-block">Honeymoon</a></li>
+                <li><a href="#" class="py-2 d-block">Nature</a></li>
+                <li><a href="#" class="py-2 d-block">Party</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+            	<h2 class="ftco-heading-2">Have a Questions?</h2>
+            	<div class="block-23 mb-3">
+	              <ul>
+	                <li><span class="icon icon-map-marker"></span><span class="text">Sri Ganesh Enclave Johna Bonda,Old Alwal,Telangana</span></li>
+                    <li><a href="#"><span class="icon icon-phone"></span><span class="text">+91 83096 49014</span></a></li>
+                    <li><a href="#"><span class="icon icon-envelope"></span><span class="text">bhanu@gmail.com</span></a></li>
+	              </ul>
+	            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/jquery.timepicker.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
